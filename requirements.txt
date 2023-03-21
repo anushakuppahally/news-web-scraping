@@ -1,0 +1,7 @@
+python-dotenv #to manage .env variables
+lxml
+bs4 #beautiful soup
+pynytimes #access nyt api
+pandas
+requests
+pathlib
