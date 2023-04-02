@@ -27,7 +27,6 @@ def test_html():
     file.write(soup_html)
     file.close
 
-
 def search_articles():
     '''
     Returns links of articles based on query 
@@ -47,7 +46,8 @@ def scrape_articles(article_urls):
     for link in article_urls:
         response=requests.get(link, headers=headers)
         soup = BeautifulSoup(response.text, "html.parser")
-        text.append(soup.get_text())
+        section = soup.find("section", attrs={"name": "articleBody"})
+        text.append(section.text)
     df['url'] = article_urls
     df['text'] = text
     filepath = Path('./sample_data.csv')  
