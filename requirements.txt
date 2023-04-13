@@ -5,3 +5,11 @@ pynytimes #access nyt api
 pandas
 requests
 pathlib
+spacy==3.2.0 #nlp
+eng-spacysentiment 
+sendgrid==6.6.0 #email sender
+seaborn
+matplotlib
+numpy
+wordcloud
+pillow

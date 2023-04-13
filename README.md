@@ -8,29 +8,30 @@ Create a copy of this and clone/download to your local computer. Then, navigate 
 cd ~/Desktop/news-web-scraping/
 ```
 
-Use Anaconda to create and activate a new virtual environment, perhaps called "scraping-env":
+Use venv to create and activate a new virtual environment, perhaps called "env":
 
 ```sh
-conda create -n scraping-env python=3.9
-conda activate scraping-env
+python3 -m venv env
+source env/bin/activate
 ```
 
 Then, within an active virtual environment, install package dependencies:
 
 ```sh
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 ```
 
 ## Configuration
 
-Sign up for a NYT developer's account and create a new app. Locate the API key for your app. Create a new file called .env and paste the following values inside, using your own credentials: 
+Sign up for a NYT developer's account and create a new app. Locate the API key for your app. Also create a SendGrid account, configure your account's email address (i.e. SENDER_ADDRESS), and obtain an API key (i.e. SENDGRID_API_KEY). Create a new file called .env and paste the following values inside, using your own credentials: 
 
 `API_KEY="____"`
+`SENDER_ADDRESS="_______________"`
+`SENDGRID_API_KEY="_______________"`
 
 ## Usage
 
 
 ```sh
-python -m app.job
-
+python3 -m app.job
 ```
